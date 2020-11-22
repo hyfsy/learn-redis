@@ -9,48 +9,33 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hyf</groupId>
-	<artifactId>springboot-redis</artifactId>
+	<artifactId>springboot-redisson</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>learn-springboot-redis</name>
-	<description>Demo project for Spring Boot</description>
+	<name>redis</name>
+	<description>Redisson for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
-        <!-- 使用jedis -->
+
+        <!-- 官方包装redis -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.lettuce</groupId>
-                    <artifactId>lettuce-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.13.5</version>
         </dependency>
 
-        <!-- json转换依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-json</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 

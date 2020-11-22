@@ -12,6 +12,9 @@ class SpringbootRedisApplicationTests {
     @Autowired
     private RedisUtil redisUtil;
 
+    /**
+     * 测试存入汉字
+     */
     @Test
     void contextLoads() {
         Person zs = new Person("zhangsan", 18, true);
