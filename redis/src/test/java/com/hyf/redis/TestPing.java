@@ -20,12 +20,13 @@ public class TestPing {
     @Before
     public void before() {
         jedis = new Jedis(HOST, PORT);
-        jedis.auth(PASSWORD);
+        // jedis.auth(PASSWORD);
     }
 
     @Test
     public void testPing() {
         String ping = jedis.ping();
+        jedis.set("test:ping", "hello world");
         System.out.println(ping);
     }
 }
